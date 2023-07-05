@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    // State property to control the visibility of the dropdown
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            let listVM = MealListViewModel()
+            MealListView(viewModel: listVM)
         }
-        .padding()
     }
 }
 
